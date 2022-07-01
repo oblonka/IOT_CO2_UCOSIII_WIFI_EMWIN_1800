@@ -1,0 +1,541 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.32.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 2 lee, 2, LIC=IK1BF-60ZK5-MMS9I-THK1C-ILF2Z-DVCWI
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.32.0.0
+Toolchain Path:  D:\keilaz\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.32.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+C:\Users\lee\Desktop\IOT_co2_log\1800022022060620220701\USER\Template.uvprojx
+Project File Date:  06/23/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\keilaz\ARM\ARMCC\Bin'
+Rebuild target 'Template'
+compiling led.c...
+compiling ILI93xx.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\HARDWARE\LCD\ILI93xx.c: 1 warning, 0 errors
+compiling stm32f4xx_it.c...
+compiling system_stm32f4xx.c...
+compiling sram.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\HARDWARE\SRAM\sram.c: 1 warning, 0 errors
+compiling 24cxx.c...
+compiling main.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\HARDWARE\MQTT\MQTT.h(34): warning:  #47-D: incompatible redefinition of macro "User_ESP32S_SSID"  (declared at line 10 of "..\HARDWARE\TCP\TCP.h")
+  #define User_ESP32S_SSID              "shian"             //shian           TP-12345678    wifi名    "miot_default"    2.4G
+..\HARDWARE\MQTT\MQTT.h(35): warning:  #47-D: incompatible redefinition of macro "User_ESP32S_PWD"  (declared at line 11 of "..\HARDWARE\TCP\TCP.h")
+  #define User_ESP32S_PWD               "shian623625"       //shian623625     12345678       wifi密码  "123456789x"
+..\HARDWARE\UIS\KEYa.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYAA.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYnum.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KeyPad.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+main.c(998): warning:  #177-D: variable "t"  was declared but never referenced
+  	u8 t;
+main.c(999): warning:  #177-D: variable "len"  was declared but never referenced
+  	u8 len;	
+main.c: 9 warnings, 0 errors
+compiling spi.c...
+compiling myiic.c...
+compiling w25qxx.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\HARDWARE\W25QXX\w25qxx.c: 1 warning, 0 errors
+compiling ctiic.c...
+compiling beep.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\HARDWARE\TCP\TCP.h(10): warning:  #47-D: incompatible redefinition of macro "User_ESP32S_SSID"  (declared at line 34 of "..\HARDWARE\MQTT\MQTT.h")
+  #define User_ESP32S_SSID             "miot_default"    //wifi名
+..\HARDWARE\TCP\TCP.h(11): warning:  #47-D: incompatible redefinition of macro "User_ESP32S_PWD"  (declared at line 35 of "..\HARDWARE\MQTT\MQTT.h")
+  #define User_ESP32S_PWD              "123456789x"      //wifi密码
+..\HARDWARE\BEEP\beep.c: 3 warnings, 0 errors
+compiling sdio_sdcard.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\HARDWARE\SDIO\sdio_sdcard.c: 1 warning, 0 errors
+compiling cst148.c...
+..\HARDWARE\TOUCH\cst148.c(299): warning:  #186-D: pointless comparison of unsigned integer with zero
+  						if (ret < 0) 
+..\HARDWARE\TOUCH\cst148.c(324): warning:  #177-D: variable "finger_id"  was declared but never referenced
+  	unsigned char finger_id, sw;  
+..\HARDWARE\TOUCH\cst148.c(324): warning:  #177-D: variable "sw"  was declared but never referenced
+  	unsigned char finger_id, sw;  
+..\HARDWARE\TOUCH\cst148.c(327): warning:  #550-D: variable "input_w"  was set but never used
+  	unsigned int  input_w = 0;//这个w数据？  
+..\HARDWARE\TOUCH\cst148.c(328): warning:  #177-D: variable "i2c_len"  was declared but never referenced
+  	int i2c_len;
+..\HARDWARE\TOUCH\cst148.c(330): warning:  #550-D: variable "ret"  was set but never used
+           u8 ret = 0;
+..\HARDWARE\TOUCH\cst148.c(332): warning:  #177-D: variable "tempPoint"  was declared but never referenced
+     u8 tempPoint = 0;
+..\HARDWARE\TOUCH\cst148.c(335): warning:  #177-D: variable "temp"  was declared but never referenced
+          u8 temp = 0;
+..\HARDWARE\TOUCH\cst148.c(336): warning:  #177-D: variable "temp_id"  was declared but never referenced
+       u8 temp_id = 0;
+..\HARDWARE\TOUCH\cst148.c(337): warning:  #177-D: variable "flag"  was declared but never referenced
+          u8 flag = 0;
+..\HARDWARE\TOUCH\cst148.c(338): warning:  #177-D: variable "temp_sta"  was declared but never referenced
+      u8 temp_sta = 0x06;
+..\HARDWARE\TOUCH\cst148.c(490): warning:  #177-D: variable "cv"  was declared but never referenced
+  			 u8 cv;	
+..\HARDWARE\TOUCH\cst148.c(492): warning:  #550-D: variable "ReportBuf"  was set but never used
+  			 u8 ReportBuf[14];
+..\HARDWARE\TOUCH\cst148.c(493): warning:  #177-D: variable "m"  was declared but never referenced
+  			 u32 m;
+..\HARDWARE\TOUCH\cst148.c(574): warning:  #177-D: variable "input_w"  was declared but never referenced
+  	unsigned int  input_w = 0;//这个w数据？
+..\HARDWARE\TOUCH\cst148.c: 15 warnings, 0 errors
+compiling HT.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\HARDWARE\HT\HT.c(625): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		SHT30_temperature = (int)((175.0 * ((float)data) / 65535.0 - 45.0) *10.0);
+..\HARDWARE\HT\HT.c(641): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		SHT30_humidity = (int)((100.0 * (float)data / 65535.0) *10.0); 
+..\HARDWARE\HT\HT.c(651): warning:  #111-D: statement is unreachable
+  	printf("temperature:%6.1fC\r\nhumidity:%6.1f\r\n",SHT30_temperature/10,SHT30_humidity/10);
+..\HARDWARE\HT\HT.c: 4 warnings, 0 errors
+compiling TCP.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\HARDWARE\TCP\TCP.c: 1 warning, 0 errors
+compiling WIFI.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\HARDWARE\WIFI\WIFI.c(639): warning:  #177-D: variable "err"  was declared but never referenced
+  				OS_ERR err;//系统延时后加
+..\HARDWARE\WIFI\WIFI.c(882): warning:  #940-D: missing return statement at end of non-void function "ESP32S_GET_RealTime_parse" 
+  		 }
+..\HARDWARE\WIFI\WIFI.c: 3 warnings, 0 errors
+compiling MQTT.c...
+..\HARDWARE\MQTT\MQTT.c(113): warning:  #177-D: variable "err"  was declared but never referenced
+  				OS_ERR err;//通过系统的延时  
+..\HARDWARE\MQTT\MQTT.c(200): warning:  #1-D: last line of file ends without a newline
+  			
+..\HARDWARE\MQTT\MQTT.c: 2 warnings, 0 errors
+compiling PRTC.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\HARDWARE\DS1302Z\PRTC.c: 1 warning, 0 errors
+compiling AIR.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\HARDWARE\UIS\KEYa.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYAA.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYnum.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\CO2\AIR.c: 4 warnings, 0 errors
+compiling HTIIC.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\HARDWARE\HT\HTIIC.c(165): warning:  #1-D: last line of file ends without a newline
+  		
+..\HARDWARE\HT\HTIIC.c: 2 warnings, 0 errors
+assembling startup_stm32f40_41xxx.s...
+compiling DMA.c...
+compiling WIFID.c...
+..\HARDWARE\WIFI\WIFID.c(1): warning:  #1-D: last line of file ends without a newline
+  #include "WIFID.h"
+..\HARDWARE\WIFI\WIFID.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\WIFI\WIFID.c: 2 warnings, 0 errors
+compiling misc.c...
+compiling stm32f4xx_fsmc.c...
+compiling stm32f4xx_gpio.c...
+compiling stm32f4xx_rcc.c...
+compiling stm32f4xx_syscfg.c...
+compiling stm32f4xx_tim.c...
+compiling stm32f4xx_usart.c...
+compiling stm32f4xx_dma.c...
+compiling stm32f4xx_spi.c...
+compiling stm32f4xx_sdio.c...
+compiling delay.c...
+compiling sys.c...
+compiling malloc.c...
+compiling usart.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\HARDWARE\TCP\TCP.h(10): warning:  #47-D: incompatible redefinition of macro "User_ESP32S_SSID"  (declared at line 34 of "..\HARDWARE\MQTT\MQTT.h")
+  #define User_ESP32S_SSID             "miot_default"    //wifi名
+..\HARDWARE\TCP\TCP.h(11): warning:  #47-D: incompatible redefinition of macro "User_ESP32S_PWD"  (declared at line 35 of "..\HARDWARE\MQTT\MQTT.h")
+  #define User_ESP32S_PWD              "123456789x"      //wifi密码
+..\SYSTEM\usart\usart.c(292): warning:  #177-D: variable "Res_USART2"  was declared but never referenced
+  	 u8 Res_USART2;
+..\SYSTEM\usart\usart.c: 4 warnings, 0 errors
+compiling fontupd.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\TEXT\fontupd.c: 1 warning, 0 errors
+compiling mytext.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\TEXT\mytext.c: 1 warning, 0 errors
+compiling exfuns.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\FATFS\exfuns\exfuns.c: 1 warning, 0 errors
+compiling mycc936.c...
+compiling fattester.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\FATFS\exfuns\fattester.c: 1 warning, 0 errors
+compiling diskio.c...
+compiling GUIConf.c...
+compiling GUI_X_Touch_Analog.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\EMWIN\STemWin\Config\GUI_X_Touch_Analog.c(165): warning:  #1-D: last line of file ends without a newline
+  		
+..\EMWIN\STemWin\Config\GUI_X_Touch_Analog.c: 2 warnings, 0 errors
+compiling GUIDRV_Template.c...
+..\EMWIN\STemWin\Config\GUIDRV_Template.c(596): warning:  #177-D: variable "pixel"  was declared but never referenced
+  						LCD_PIXELINDEX pixel;
+..\EMWIN\STemWin\Config\GUIDRV_Template.c: 1 warning, 0 errors
+compiling GUI_X_UCOSIII.c...
+compiling LCDConf_FlexColor_Template.c...
+compiling cpu_c.c...
+assembling cpu_a.asm...
+compiling cpu_core.c...
+compiling lib_math.c...
+compiling lib_ascii.c...
+compiling ff.c...
+assembling lib_mem_a.asm...
+compiling bsp.c...
+compiling lib_mem.c...
+compiling lib_str.c...
+compiling os_cfg_app.c...
+compiling os_dbg.c...
+compiling os_core.c...
+compiling os_int.c...
+compiling os_msg.c...
+compiling os_flag.c...
+compiling os_mutex.c...
+compiling os_pend_multi.c...
+compiling os_prio.c...
+compiling os_q.c...
+compiling os_sem.c...
+compiling os_stat.c...
+compiling os_mem.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\UCOSIII\uCOS-III\Source\os_mem.c: 1 warning, 0 errors
+compiling os_tick.c...
+compiling os_task.c...
+compiling os_time.c...
+compiling os_var.c...
+assembling os_cpu_a.asm...
+compiling os_tmr.c...
+compiling os_app_hooks.c...
+compiling KEYbuzzer.c...
+..\HARDWARE\UIS\KEYbuzzer.c(1): warning:  #1-D: last line of file ends without a newline
+  #include "KEYbuzzer.h"
+..\HARDWARE\UIS\KEYbuzzer.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYbuzzer.c: 2 warnings, 0 errors
+compiling KEYcurve.c...
+..\HARDWARE\UIS\KEYcurve.c(1): warning:  #1-D: last line of file ends without a newline
+  #include "KEYcurve.h"
+..\HARDWARE\UIS\KEYcurve.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYcurve.c: 2 warnings, 0 errors
+compiling KEYlock.c...
+..\HARDWARE\UIS\KEYlock.c(1): warning:  #1-D: last line of file ends without a newline
+  #include "KEYlock.h"
+..\HARDWARE\UIS\KEYlock.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYlock.c: 2 warnings, 0 errors
+compiling KEYslider.c...
+..\HARDWARE\UIS\KEYslider.c(1): warning:  #1-D: last line of file ends without a newline
+  #include "KEYslider.h"
+..\HARDWARE\UIS\KEYslider.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYslider.c: 2 warnings, 0 errors
+compiling KEYset.c...
+..\HARDWARE\UIS\KEYset.c(1): warning:  #1-D: last line of file ends without a newline
+  #include "KEYset.h"
+..\HARDWARE\UIS\KEYset.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYset.c: 2 warnings, 0 errors
+compiling os_cpu_c.c...
+compiling KEYAA.c...
+..\HARDWARE\UIS\KEYAA.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYa.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYnum.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYAA.c(958): warning:  #177-D: function "_cbButtonEXIT2_A"  was declared but never referenced
+  static void _cbButtonEXIT2_A(WM_MESSAGE* pMsg)
+..\HARDWARE\UIS\KEYAA.c: 4 warnings, 0 errors
+compiling KEYnum.c...
+..\HARDWARE\UIS\KEYnum.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYa.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYAA.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYnum.c(961): warning:  #177-D: function "_cbButtonEXIT2_num"  was declared but never referenced
+  static void _cbButtonEXIT2_num(WM_MESSAGE* pMsg)
+..\HARDWARE\UIS\KEYnum.c: 4 warnings, 0 errors
+compiling KEYa.c...
+..\HARDWARE\UIS\KEYa.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYAA.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYnum.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYa.c(1273): warning:  #177-D: function "_cbButtonEXIT2_a"  was declared but never referenced
+  static void _cbButtonEXIT2_a(WM_MESSAGE* pMsg)
+..\HARDWARE\UIS\KEYa.c: 4 warnings, 0 errors
+compiling ButtonUse.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\HARDWARE\MQTT\MQTT.h(34): warning:  #47-D: incompatible redefinition of macro "User_ESP32S_SSID"  (declared at line 10 of "..\HARDWARE\TCP\TCP.h")
+  #define User_ESP32S_SSID              "shian"             //shian           TP-12345678    wifi名    "miot_default"    2.4G
+..\HARDWARE\MQTT\MQTT.h(35): warning:  #47-D: incompatible redefinition of macro "User_ESP32S_PWD"  (declared at line 11 of "..\HARDWARE\TCP\TCP.h")
+  #define User_ESP32S_PWD               "shian623625"       //shian623625     12345678       wifi密码  "123456789x"
+..\EMWIN_DEMO\ButtonUse\ButtonUse.c(10796): warning:  #223-D: function "MainTask_WIFIcon" declared implicitly
+  			MainTask_WIFIcon();
+..\EMWIN_DEMO\ButtonUse\ButtonUse.c(10683): warning:  #177-D: variable "DS1302Z_year"  was declared but never referenced
+  	  char    DS1302Z_year[10];
+..\EMWIN_DEMO\ButtonUse\ButtonUse.c(10684): warning:  #177-D: variable "DS1302Z_month"  was declared but never referenced
+  	  char   DS1302Z_month[10];
+..\EMWIN_DEMO\ButtonUse\ButtonUse.c(10685): warning:  #177-D: variable "DS1302Z_day"  was declared but never referenced
+  	  char     DS1302Z_day[10];
+..\EMWIN_DEMO\ButtonUse\ButtonUse.c(10690): warning:  #177-D: variable "DS1302Z_hour"  was declared but never referenced
+  	  char    DS1302Z_hour[10];
+..\EMWIN_DEMO\ButtonUse\ButtonUse.c(10691): warning:  #177-D: variable "DS1302Z_minute"  was declared but never referenced
+  	  char  DS1302Z_minute[10];
+..\EMWIN_DEMO\ButtonUse\ButtonUse.c(10692): warning:  #177-D: variable "DS1302Z_second"  was declared but never referenced
+  	  char  DS1302Z_second[10];
+..\EMWIN_DEMO\ButtonUse\ButtonUse.c(10290): warning:  #177-D: function "_cbButtonEXIT_main_butt_wenduji"  was declared but never referenced
+  static void _cbButtonEXIT_main_butt_wenduji(WM_MESSAGE* pMsg)
+..\EMWIN_DEMO\ButtonUse\ButtonUse.c: 11 warnings, 0 errors
+compiling usmart_str.c...
+compiling usmart.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\USMART\usmart.c: 1 warning, 0 errors
+compiling usmart_config.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\USMART\usmart_config.c: 1 warning, 0 errors
+compiling WIFIcon.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\HARDWARE\UIS\KEYa.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYAA.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYnum.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KeyPad.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\WIFICON\WIFIcon.c(3542): warning:  #177-D: function "_cbButtonEXIT_WIFIcon_BLACK_1"  was declared but never referenced
+  static void _cbButtonEXIT_WIFIcon_BLACK_1(WM_MESSAGE* pMsg)
+..\HARDWARE\WIFICON\WIFIcon.c(3603): warning:  #177-D: function "_cbButtonEXIT_WIFIcon_BLACK_2"  was declared but never referenced
+  static void _cbButtonEXIT_WIFIcon_BLACK_2(WM_MESSAGE* pMsg)
+..\HARDWARE\WIFICON\WIFIcon.c(3664): warning:  #177-D: function "_cbButtonEXIT_WIFIcon_BLACK_3"  was declared but never referenced
+  static void _cbButtonEXIT_WIFIcon_BLACK_3(WM_MESSAGE* pMsg)
+..\HARDWARE\WIFICON\WIFIcon.c(3726): warning:  #177-D: function "_cbButtonEXIT_WIFIcon_BLACK_4"  was declared but never referenced
+  static void _cbButtonEXIT_WIFIcon_BLACK_4(WM_MESSAGE* pMsg)
+..\HARDWARE\WIFICON\WIFIcon.c(3788): warning:  #177-D: function "_cbButtonEXIT_WIFIcon_BLACK_5"  was declared but never referenced
+  static void _cbButtonEXIT_WIFIcon_BLACK_5(WM_MESSAGE* pMsg)
+..\HARDWARE\WIFICON\WIFIcon.c(3852): warning:  #177-D: function "_cbButtonEXIT_WIFIcon_BLACK_6"  was declared but never referenced
+  static void _cbButtonEXIT_WIFIcon_BLACK_6(WM_MESSAGE* pMsg)
+..\HARDWARE\WIFICON\WIFIcon.c(3915): warning:  #177-D: function "_cbButtonEXIT_WIFIcon_BLACK_7"  was declared but never referenced
+  static void _cbButtonEXIT_WIFIcon_BLACK_7(WM_MESSAGE* pMsg)
+..\HARDWARE\WIFICON\WIFIcon.c(3978): warning:  #177-D: function "_cbButtonEXIT_WIFIcon_BLACK_8"  was declared but never referenced
+  static void _cbButtonEXIT_WIFIcon_BLACK_8(WM_MESSAGE* pMsg)
+..\HARDWARE\WIFICON\WIFIcon.c(4040): warning:  #177-D: function "_cbButtonEXIT_WIFIcon_BLACK_9"  was declared but never referenced
+  static void _cbButtonEXIT_WIFIcon_BLACK_9(WM_MESSAGE* pMsg)
+..\HARDWARE\WIFICON\WIFIcon.c(4102): warning:  #177-D: function "_cbButtonEXIT_WIFIcon_BLACK_10"  was declared but never referenced
+  static void _cbButtonEXIT_WIFIcon_BLACK_10(WM_MESSAGE* pMsg)
+..\HARDWARE\WIFICON\WIFIcon.c: 15 warnings, 0 errors
+compiling KeyPad.c...
+..\SYSTEM\usart\usart.h(48): warning:  #1295-D: Deprecated declaration CO2_Tx - give arg types
+  void CO2_Tx();
+..\HARDWARE\MQTT\MQTT.h(34): warning:  #47-D: incompatible redefinition of macro "User_ESP32S_SSID"  (declared at line 10 of "..\HARDWARE\TCP\TCP.h")
+  #define User_ESP32S_SSID              "shian"             //shian           TP-12345678    wifi名    "miot_default"    2.4G
+..\HARDWARE\MQTT\MQTT.h(35): warning:  #47-D: incompatible redefinition of macro "User_ESP32S_PWD"  (declared at line 11 of "..\HARDWARE\TCP\TCP.h")
+  #define User_ESP32S_PWD               "shian623625"       //shian623625     12345678       wifi密码  "123456789x"
+..\HARDWARE\UIS\KEYa.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYAA.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KEYnum.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KeyPad.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\UIS\KeyPad.c(799): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(800): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(818): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(819): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(837): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(838): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(856): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(857): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(875): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(876): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(894): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(895): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(913): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(914): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(932): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(933): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(951): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(952): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(970): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(971): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(989): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(990): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1008): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1009): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1027): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1028): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1046): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1047): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1065): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1066): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1084): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1085): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1103): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1104): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1122): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1123): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1141): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1142): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1160): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1161): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1179): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1180): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1198): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1199): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1217): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1218): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1236): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1237): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1255): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1256): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1274): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1275): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1293): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1294): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1312): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1313): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1331): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1332): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1350): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                  BUTTON_GetText(hItem, Str, 8);
+..\HARDWARE\UIS\KeyPad.c(1351): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                  strcat(Key_Data, Str);
+..\HARDWARE\UIS\KeyPad.c(1383): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                      BUTTON_SetText(hItem, Str);
+..\HARDWARE\UIS\KeyPad.c(1412): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                          BUTTON_SetText(hItem, Str);
+..\HARDWARE\UIS\KeyPad.c: 69 warnings, 0 errors
+linking...
+Program Size: Code=125638 RO-data=42630 RW-data=2068 ZI-data=1048980  
+FromELF: creating hex file...
+"..\OBJ\Template.axf" - 0 Error(s), 181 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  D:\keilaz\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:41
+</pre>
+</body>
+</html>
