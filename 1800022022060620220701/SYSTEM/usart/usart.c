@@ -390,7 +390,7 @@ if( USART_GetITStatus( USART2, USART_IT_IDLE ) == SET )
 /*******************************************************************************************/
 /*****************************USART1的初始化   CO2************************************************/
 /*******************************************************************************************/
-/*
+
 
 #if EN_USART1_RX   //如果使能了接收     初始化串口1
 
@@ -445,7 +445,7 @@ void uart1_init_CO2(u32 bound)
 	
   USART_Cmd(USART1, ENABLE);                               //使能串口1
 	
-	//USART_ClearFlag(USART1, USART_FLAG_TC);
+	//USART_ClearFlag(USART1, USART_FLAG_TC);//解决第一个收到的字符为00的问题，实际应为16.TC位初始为1导致的问题，那么我们在发送每一个字节前把TC置0也可以解决问题，
 	
 	
 	
@@ -468,6 +468,8 @@ void uart1_init_CO2(u32 bound)
 
 void USARTX_Send_data(USART_TypeDef * USARTx,u8 *s)
 {
+	
+ USART_ClearFlag(USART1, USART_FLAG_TC);	
  while(*s!='\0')
  { 
   while(USART_GetFlagStatus(USARTx,USART_FLAG_TC )==RESET); 
@@ -500,11 +502,15 @@ void USART1_IRQHandler(void)                	//串口1中断服务程序
 
 if(USART_GetITStatus( USART1, USART_IT_RXNE ) != RESET )//接收中断
 	{
-	 CO2_DATA_Receive  = USART_ReceiveData( USART1 );
-	 USART_SendData(USART6,CO2_DATA_Receive);//改为串口6  测试发送接口   暂时屏蔽掉  2022年5月28日
+	  USART_ClearFlag(USART1, USART_FLAG_TC);	
+		//USART_ClearITPendingBit(USART1, USART_IT_RXNE);
+		CO2_DATA_Receive  = USART_ReceiveData( USART1 );
+		
+
+	  USART_SendData(USART6,CO2_DATA_Receive);//改为串口6  测试发送接口   暂时屏蔽掉  2022年5月28日
 		
 	 //在规定的数组长度下，将接收到的数据放到这个数组里面。接收的数组用来进行指令的返回的接收，解析
-	if(CO2_Fram_Record_Struct.InfBit_CO2.FramLength_CO2 < ( CO2_RX_BUF_MAX_LEN - 1 ) ) 
+	if(CO2_Fram_Record_Struct.InfBit_CO2.FramLength_CO2 < ( CO2_RX_BUF_MAX_LEN ) ) // CO2_RX_BUF_MAX_LEN - 1
 		{
 		 CO2_Fram_Record_Struct.Data_RX_BUF_CO2[ CO2_Fram_Record_Struct.InfBit_CO2.FramLength_CO2 ++ ]  = CO2_DATA_Receive;   
 		}                      
@@ -542,6 +548,6 @@ if( USART_GetITStatus( USART1, USART_IT_IDLE ) == SET )//空闲中断
 
 
 
-*/
+
 
 

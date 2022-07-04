@@ -122,7 +122,7 @@ void start_task(void *p_arg);
 /*********************************************************触摸任务*************************************************************/
 //TOUCH任务
 //设置任务优先级
-#define TOUCH_TASK_PRIO				4
+#define TOUCH_TASK_PRIO				4//
 //任务堆栈大小
 #define TOUCH_STK_SIZE				1024//128  修改了触摸的堆栈大小位256     20220224 2022-2-24 15:59:39
 //任务控制块
@@ -139,7 +139,7 @@ void touch_task(void *p_arg);
 /*********************************************************LED,ADC，蜂鸣器，控制引脚，唤醒IO，任务******************************/
 //LED0任务
 //设置任务优先级
-#define LED0_TASK_PRIO 				4//5
+#define LED0_TASK_PRIO 			4//5
 //任务堆栈大小
 #define LED0_STK_SIZE				256
 //任务控制块
@@ -171,7 +171,7 @@ void emwinui_task(void *p_arg);
 
 //SHT30任务
 //设置任务优先级
-#define SHT30_TASK_PRIO 				4//5
+#define SHT30_TASK_PRIO 			4//5
 //任务堆栈大小
 #define SHT30_STK_SIZE				1024
 //任务控制块
@@ -185,7 +185,7 @@ void SHT30_task(void *p_arg);
 
 //CO2任务
 //设置任务优先级
-#define CO2_TASK_PRIO 				4//5
+#define CO2_TASK_PRIO 			4//5
 //任务堆栈大小
 #define CO2_STK_SIZE				1024
 //任务控制块
@@ -202,7 +202,7 @@ void CO2_task(void *p_arg);
 
 //PRTC任务
 //设置任务优先级
-#define PRTC_TASK_PRIO 				4//5
+#define PRTC_TASK_PRIO 			4//5
 //任务堆栈大小
 #define PRTC_STK_SIZE				1024
 //任务控制块
@@ -216,7 +216,7 @@ void PRTC_task(void *p_arg);
 
 //WIFI任务
 //设置任务优先级
-#define WIFI_TASK_PRIO 				4//5
+#define WIFI_TASK_PRIO 			4//5
 //任务堆栈大小
 #define WIFI_STK_SIZE				1024
 //任务控制块
@@ -241,29 +241,25 @@ int main(void)
 	uchar init_time[6]={22,6,20,14,14,06};//初始化时间参数   手动配置时间的设置
 	
 	
-	
-	delay_init(168);       	  //延时初始化
+	delay_init(168);//延时初始化
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//中断分组配置
-	
 	
 	uart_init(115200);    	  //调试串口6波特率设置
 	uart2_init_wifi(115200);  //WIFI设置
+	uart1_init_CO2(9600);     //CO2串口波特率设置    2022.05   9600
 	
-	//uart1_init_CO2(9600);     //CO2串口波特率设置    2022.05   9600
-	USART1_Init(9600);
-	
-	LCD_Init();			          //初始化LCD
-	
+	LCD_Init();			          //初始化TFT LCD
 	
 	
 	//W25QXX_Init();			    //初始化W25Q128
 	LED_Init();   			      //LED初始化
 	BEEP_Init();			        //初始化蜂鸣器
-//	CO2_VCC_CTR_Init();       //二氧化碳电平IO初始化
+  CO2_VCC_CTR_Init();       //二氧化碳电平IO初始化
+	
 	
 	//FSMC_SRAM_Init(); 		  //SRAM初始化	
 	mem_init(SRAMIN); 		    //内部RAM初始化
-	//mem_init(SRAMEX); 		  //外部RAM初始化
+	//mem_init(SRAMEX); 		  //备用外部RAM初始化
 	mem_init(SRAMCCM);		    //CCM初始化
 	
 	
@@ -623,7 +619,7 @@ password  的解析是    emwin     edit输入的字符串        Edit_buff
 
 
 
-	 // ButtonUse_Demo();  //主界面
+	  ButtonUse_Demo();  //主界面
 		
 	 //	if(top_button_flag==1)
 	 //	{
@@ -644,7 +640,7 @@ password  的解析是    emwin     edit输入的字符串        Edit_buff
 		
 		
 		
-		MainTask_WIFIcon();
+		//MainTask_WIFIcon();
 		//MainTask_a();
 		//MainTask_AA();
 		//MainTask_num();
@@ -880,7 +876,7 @@ void SHT30_task(void *p_arg)
 	  printf("temperature:%6.1f 'C\r\n humidity:%6.1f \r\n",SHT30_temperature/10,SHT30_humidity/10);
 		
 	*/
-		
+		//sht30_data_process();
 		
 		
 		OSTimeDlyHMSM(0,0,0,1500,OS_OPT_TIME_PERIODIC,&err);//延时500ms
@@ -965,9 +961,11 @@ void CO2_task(void *p_arg)
 		
 		//CO2_Send_Data();
 		
-		//Read_CO2_ppm();
+		
+		Read_CO2_ppm();
 		//printf("\r\n CO2=  %d ppm \r\n",CO2_Measure_data);
-		//delay_ms(1000);	
+		delay_ms(5000);	
+		
 		
 		//CO2_Tx();
 		//printf("CO2=  %d ppm \r\n",CO2_data);
@@ -1028,9 +1026,9 @@ void WIFI_task(void *p_arg)
 		
 		
 		//下面是测试解析WIFI列表的函数，解析出的SSID打印输出到串口显示。
-		delay_ms(2000);
-		ESP32S_JoinAP_connect_list_parse("AT+CWLAP",500);//解析SSID的命令的函数,不定长的数据解析。
-	  delay_ms(2000);
+		//delay_ms(2000);
+		//ESP32S_JoinAP_connect_list_parse("AT+CWLAP",500);//解析SSID的命令的函数,不定长的数据解析。
+	  //delay_ms(2000);
 		//解析WIFI列表的函数
 		
 		
@@ -1038,13 +1036,13 @@ void WIFI_task(void *p_arg)
 		
 		//ssid是获取的扫描的字符串   password是输入的字符串获取
 	
-/*
+
 if(wifi_ap_flag ==1)
 			{
 			ESP32S_STA_MQTTClient_Test_SA_test(User_ESP32S_SSID, Key_Data);
 			}
 		
-*/	
+	
 
 		
 	

@@ -10199,7 +10199,7 @@ static const GUI_WIDGET_CREATE_INFO _aDialogCreate_main_Ui[] = {
   { BUTTON_CreateIndirect, "", ID_BUTTON_4, 2, 409, 106, 69, 0, 0x0, 0 },
   { TEXT_CreateIndirect, "45", ID_TEXT_0, 35, 351, 56, 47, 0, 0x0, 0 },
   { TEXT_CreateIndirect, "25", ID_TEXT_1, 199, 351, 80, 40, 0, 0x0, 0 },
-  { TEXT_CreateIndirect, "869", ID_TEXT_2, 71, 166, 185, 82, 0, 0x0, 0 },
+  { TEXT_CreateIndirect, "8693", ID_TEXT_2, 60, 166, 240, 82, 0, 0x0, 0 },//71, 166, 185, 82,
   { TEXT_CreateIndirect, ".8", ID_TEXT_3, 95, 372, 34, 27, 0, 0x0, 0 },
   { SLIDER_CreateIndirect, "Slider", ID_SLIDER_0, 32, 112, 6, 152, 8, 0x0, 0 },
   { TEXT_CreateIndirect, "%", ID_TEXT_4, 274, 368, 23, 20, 0, 0x0, 0 },
@@ -10981,11 +10981,21 @@ static void _cbDialog_main_Ui(WM_MESSAGE * pMsg) {
     TEXT_SetFont(hItem, GUI_FONT_D32);
     TEXT_SetTextColor(hItem, 0x00FFFFFF);
     //
-    // Initialization of '869'
+    // Initialization of '869'   CO2的数值的显示参数设置
+		
+		
     //
     hItem = WM_GetDialogItem(pMsg->hWin, ID_TEXT_2);
+		
+		TEXT_SetTextAlign(hItem, GUI_TA_LEFT | GUI_TA_VCENTER);//GUI_TA_LEFT   GUI_TA_HCENTER
     TEXT_SetFont(hItem, GUI_FONT_D80);
-    TEXT_SetTextColor(hItem, 0x00FFFFFF);
+		
+		
+    //TEXT_SetTextColor(hItem, 0x00FFFFFF);//GUI_GREEN  
+		TEXT_SetTextColor(hItem, GUI_GREEN);
+		
+		
+		
     //
     // Initialization of '.8'
     //

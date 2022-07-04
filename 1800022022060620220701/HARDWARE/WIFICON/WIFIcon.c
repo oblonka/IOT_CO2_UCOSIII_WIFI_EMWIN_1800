@@ -3537,7 +3537,7 @@ static const GUI_WIDGET_CREATE_INFO _aDialogCreate[] = {
 
 
 
-
+char  text[80];//char*类型 
 
 static void _cbButtonEXIT_WIFIcon_BLACK_1(WM_MESSAGE* pMsg)
 {
@@ -3788,7 +3788,7 @@ static void _cbButtonEXIT_WIFIcon_BLACK_4(WM_MESSAGE* pMsg)
 static void _cbButtonEXIT_WIFIcon_BLACK_5(WM_MESSAGE* pMsg)
 {
     GUI_RECT Rect;
-
+char  text_5[80];
     switch (pMsg->MsgId)
     {
     case(WM_PAINT)://在WM_PAINT下面修改控件的颜色  2022-3-30 14:37:51
@@ -3801,8 +3801,8 @@ static void _cbButtonEXIT_WIFIcon_BLACK_5(WM_MESSAGE* pMsg)
         }
         else
         {
-            GUI_SetColor(GUI_DARKGRAY);  //DARKGREEN      GUI_BLUE
-            GUI_SetBkColor(GUI_DARKGRAY);//GUI_DARKGREEN
+            GUI_SetColor(0X7B7B7B);  //DARKGREEN      GUI_BLUE
+            GUI_SetBkColor(0X7B7B7B);//GUI_DARKGREEN
             GUI_FillRect(Rect.x0, Rect.y0, Rect.x1, Rect.y1);
 					
 						//GUI_RECT rClient;
@@ -3815,7 +3815,7 @@ static void _cbButtonEXIT_WIFIcon_BLACK_5(WM_MESSAGE* pMsg)
         }
         GUI_SetFont(&GUI_Font20B_ASCII);
         GUI_SetColor(GUI_GREEN);
-        //GUI_SetTextMode(GUI_TM_TRANS);	//透明文本    注释时间   2022-5-23 15:46:29
+        GUI_SetTextMode(GUI_TM_TRANS);	//透明文本    注释时间   2022-5-23 15:46:29
 				
 				//这里加读取列表的变量
 				//sprintf(DS1302Z_h_m, "%02d:%02d", time_data[3],time_data[4]);
@@ -3832,9 +3832,9 @@ static void _cbButtonEXIT_WIFIcon_BLACK_5(WM_MESSAGE* pMsg)
 				sprintf(text,"%02d:%s" ,offset,save_ssid[offset]);//offset=0开始，带数标，的提取的SSID的字符串
 				*/
 							
-							
+					sprintf(text_5, "%s", "CU_T322");		
         //sprintf(text, "8:wifi_text_shian_8");
-        //GUI_DispStringInRect(text, &Rect, GUI_TA_VCENTER | GUI_TA_LEFT);///靠左  和  居中
+        GUI_DispStringInRect(text_5, &Rect, GUI_TA_VCENTER | GUI_TA_LEFT);///靠左  和  居中
         break;
     default:
         BUTTON_Callback(pMsg);
@@ -3852,7 +3852,9 @@ static void _cbButtonEXIT_WIFIcon_BLACK_5(WM_MESSAGE* pMsg)
 static void _cbButtonEXIT_WIFIcon_BLACK_6(WM_MESSAGE* pMsg)
 {
     GUI_RECT Rect;
-
+	
+char  text_6[80];
+	
     switch (pMsg->MsgId)
     {
     case(WM_PAINT)://在WM_PAINT下面修改控件的颜色  2022-3-30 14:37:51
@@ -3865,8 +3867,8 @@ static void _cbButtonEXIT_WIFIcon_BLACK_6(WM_MESSAGE* pMsg)
         }
         else
         {
-            GUI_SetColor(GUI_DARKGRAY);  //DARKGREEN      GUI_BLUE
-            GUI_SetBkColor(GUI_DARKGRAY);//GUI_DARKGREEN
+            GUI_SetColor(0X7B7B7B);  //DARKGREEN      GUI_BLUE
+            GUI_SetBkColor(0X7B7B7B);//GUI_DARKGREEN
             GUI_FillRect(Rect.x0, Rect.y0, Rect.x1, Rect.y1);
 					
 						//GUI_RECT rClient;
@@ -3879,7 +3881,7 @@ static void _cbButtonEXIT_WIFIcon_BLACK_6(WM_MESSAGE* pMsg)
         }
         GUI_SetFont(&GUI_Font20B_ASCII);
         GUI_SetColor(GUI_GREEN);
-        //GUI_SetTextMode(GUI_TM_TRANS);	//透明文本    注释时间   2022-5-23 15:46:29
+        GUI_SetTextMode(GUI_TM_TRANS);	//透明文本    注释时间   2022-5-23 15:46:29
 				
 				//这里加读取列表的变量
 				//sprintf(DS1302Z_h_m, "%02d:%02d", time_data[3],time_data[4]);
@@ -3896,9 +3898,9 @@ static void _cbButtonEXIT_WIFIcon_BLACK_6(WM_MESSAGE* pMsg)
 				sprintf(text,"%02d:%s" ,offset,save_ssid[offset]);//offset=0开始，带数标，的提取的SSID的字符串
 				*/
 							
-							
+					sprintf(text_6, "%s", "CU_5TMN");		
         //sprintf(text, "8:wifi_text_shian_8");
-        //GUI_DispStringInRect(text, &Rect, GUI_TA_VCENTER | GUI_TA_LEFT);///靠左  和  居中
+        GUI_DispStringInRect(text_6, &Rect, GUI_TA_VCENTER | GUI_TA_LEFT);///靠左  和  居中
         break;
     default:
         BUTTON_Callback(pMsg);
@@ -3915,7 +3917,8 @@ static void _cbButtonEXIT_WIFIcon_BLACK_6(WM_MESSAGE* pMsg)
 static void _cbButtonEXIT_WIFIcon_BLACK_7(WM_MESSAGE* pMsg)
 {
     GUI_RECT Rect;
-
+char  text_7[80];
+	
     switch (pMsg->MsgId)
     {
     case(WM_PAINT)://在WM_PAINT下面修改控件的颜色  2022-3-30 14:37:51
@@ -3928,8 +3931,8 @@ static void _cbButtonEXIT_WIFIcon_BLACK_7(WM_MESSAGE* pMsg)
         }
         else
         {
-            GUI_SetColor(GUI_DARKGRAY);  //DARKGREEN      GUI_BLUE
-            GUI_SetBkColor(GUI_DARKGRAY);//GUI_DARKGREEN
+            GUI_SetColor(0X7B7B7B);  //DARKGREEN      GUI_BLUE
+            GUI_SetBkColor(0X7B7B7B);//GUI_DARKGREEN
             GUI_FillRect(Rect.x0, Rect.y0, Rect.x1, Rect.y1);
 					
 						//GUI_RECT rClient;
@@ -3942,7 +3945,7 @@ static void _cbButtonEXIT_WIFIcon_BLACK_7(WM_MESSAGE* pMsg)
         }
         GUI_SetFont(&GUI_Font20B_ASCII);
         GUI_SetColor(GUI_GREEN);
-        //GUI_SetTextMode(GUI_TM_TRANS);	//透明文本    注释时间   2022-5-23 15:46:29
+        GUI_SetTextMode(GUI_TM_TRANS);	//透明文本    注释时间   2022-5-23 15:46:29
 				
 				//这里加读取列表的变量
 				//sprintf(DS1302Z_h_m, "%02d:%02d", time_data[3],time_data[4]);
@@ -3959,9 +3962,9 @@ static void _cbButtonEXIT_WIFIcon_BLACK_7(WM_MESSAGE* pMsg)
 				sprintf(text,"%02d:%s" ,offset,save_ssid[offset]);//offset=0开始，带数标，的提取的SSID的字符串
 				*/
 							
-							
+							sprintf(text_7, "%s", "CNCEC");
         //sprintf(text, "8:wifi_text_shian_8");
-        //GUI_DispStringInRect(text, &Rect, GUI_TA_VCENTER | GUI_TA_LEFT);///靠左  和  居中
+        GUI_DispStringInRect(text_7, &Rect, GUI_TA_VCENTER | GUI_TA_LEFT);///靠左  和  居中
         break;
     default:
         BUTTON_Callback(pMsg);
@@ -3978,7 +3981,7 @@ static void _cbButtonEXIT_WIFIcon_BLACK_7(WM_MESSAGE* pMsg)
 static void _cbButtonEXIT_WIFIcon_BLACK_8(WM_MESSAGE* pMsg)
 {
     GUI_RECT Rect;
-
+char  text_8[80];
     switch (pMsg->MsgId)
     {
     case(WM_PAINT)://在WM_PAINT下面修改控件的颜色  2022-3-30 14:37:51
@@ -3991,8 +3994,8 @@ static void _cbButtonEXIT_WIFIcon_BLACK_8(WM_MESSAGE* pMsg)
         }
         else
         {
-            GUI_SetColor(GUI_DARKGRAY);  //DARKGREEN      GUI_BLUE
-            GUI_SetBkColor(GUI_DARKGRAY);//GUI_DARKGREEN
+            GUI_SetColor(0X7B7B7B);  //DARKGREEN      GUI_BLUE
+            GUI_SetBkColor(0X7B7B7B);//GUI_DARKGREEN
             GUI_FillRect(Rect.x0, Rect.y0, Rect.x1, Rect.y1);
 					
 						//GUI_RECT rClient;
@@ -4005,7 +4008,7 @@ static void _cbButtonEXIT_WIFIcon_BLACK_8(WM_MESSAGE* pMsg)
         }
         GUI_SetFont(&GUI_Font20B_ASCII);
         GUI_SetColor(GUI_GREEN);
-        //GUI_SetTextMode(GUI_TM_TRANS);	//透明文本    注释时间   2022-5-23 15:46:29
+        GUI_SetTextMode(GUI_TM_TRANS);	//透明文本    注释时间   2022-5-23 15:46:29
 				
 				//这里加读取列表的变量
 				//sprintf(DS1302Z_h_m, "%02d:%02d", time_data[3],time_data[4]);
@@ -4022,9 +4025,9 @@ static void _cbButtonEXIT_WIFIcon_BLACK_8(WM_MESSAGE* pMsg)
 				sprintf(text,"%02d:%s" ,offset,save_ssid[offset]);//offset=0开始，带数标，的提取的SSID的字符串
 				*/
 							
-							
+					sprintf(text_8, "%s", "bjzjhyjz622622");		
         //sprintf(text, "8:wifi_text_shian_8");
-        //GUI_DispStringInRect(text, &Rect, GUI_TA_VCENTER | GUI_TA_LEFT);///靠左  和  居中
+        GUI_DispStringInRect(text_8, &Rect, GUI_TA_VCENTER | GUI_TA_LEFT);///靠左  和  居中
         break;
     default:
         BUTTON_Callback(pMsg);
@@ -4041,6 +4044,8 @@ static void _cbButtonEXIT_WIFIcon_BLACK_9(WM_MESSAGE* pMsg)
 {
     GUI_RECT Rect;
 
+	char  text_9[80];
+	
     switch (pMsg->MsgId)
     {
     case(WM_PAINT)://在WM_PAINT下面修改控件的颜色  2022-3-30 14:37:51
@@ -4053,8 +4058,8 @@ static void _cbButtonEXIT_WIFIcon_BLACK_9(WM_MESSAGE* pMsg)
         }
         else
         {
-            GUI_SetColor(GUI_DARKGRAY);  //DARKGREEN      GUI_BLUE
-            GUI_SetBkColor(GUI_DARKGRAY);//GUI_DARKGREEN
+            GUI_SetColor(0X7B7B7B);  //DARKGREEN      GUI_BLUE
+            GUI_SetBkColor(0X7B7B7B);//GUI_DARKGREEN
             GUI_FillRect(Rect.x0, Rect.y0, Rect.x1, Rect.y1);
 					
 						//GUI_RECT rClient;
@@ -4067,7 +4072,7 @@ static void _cbButtonEXIT_WIFIcon_BLACK_9(WM_MESSAGE* pMsg)
         }
         GUI_SetFont(&GUI_Font20B_ASCII);
         GUI_SetColor(GUI_GREEN);
-        //GUI_SetTextMode(GUI_TM_TRANS);	//透明文本    注释时间   2022-5-23 15:46:29
+        GUI_SetTextMode(GUI_TM_TRANS);	//透明文本    注释时间   2022-5-23 15:46:29
 				
 				//这里加读取列表的变量
 				//sprintf(DS1302Z_h_m, "%02d:%02d", time_data[3],time_data[4]);
@@ -4084,9 +4089,9 @@ static void _cbButtonEXIT_WIFIcon_BLACK_9(WM_MESSAGE* pMsg)
 				sprintf(text,"%02d:%s" ,offset,save_ssid[offset]);//offset=0开始，带数标，的提取的SSID的字符串
 				*/
 							
-							
+						sprintf(text_9, "%s", "656");	
         //sprintf(text, "8:wifi_text_shian_8");
-        //GUI_DispStringInRect(text, &Rect, GUI_TA_VCENTER | GUI_TA_LEFT);///靠左  和  居中
+        GUI_DispStringInRect(text_9, &Rect, GUI_TA_VCENTER | GUI_TA_LEFT);///靠左  和  居中
         break;
     default:
         BUTTON_Callback(pMsg);
@@ -4103,6 +4108,9 @@ static void _cbButtonEXIT_WIFIcon_BLACK_10(WM_MESSAGE* pMsg)
 {
     GUI_RECT Rect;
 
+	
+	char  text_10[80];
+	
     switch (pMsg->MsgId)
     {
     case(WM_PAINT)://在WM_PAINT下面修改控件的颜色  2022-3-30 14:37:51
@@ -4115,8 +4123,8 @@ static void _cbButtonEXIT_WIFIcon_BLACK_10(WM_MESSAGE* pMsg)
         }
         else
         {
-            GUI_SetColor(GUI_DARKGRAY);  //DARKGREEN      GUI_BLUE
-            GUI_SetBkColor(GUI_DARKGRAY);//GUI_DARKGREEN
+            GUI_SetColor(0X7B7B7B);  //DARKGREEN      GUI_BLUE
+            GUI_SetBkColor(0X7B7B7B);//GUI_DARKGREEN
             GUI_FillRect(Rect.x0, Rect.y0, Rect.x1, Rect.y1);
 					
 						//GUI_RECT rClient;
@@ -4129,7 +4137,7 @@ static void _cbButtonEXIT_WIFIcon_BLACK_10(WM_MESSAGE* pMsg)
         }
         GUI_SetFont(&GUI_Font20B_ASCII);
         GUI_SetColor(GUI_GREEN);
-        //GUI_SetTextMode(GUI_TM_TRANS);	//透明文本    注释时间   2022-5-23 15:46:29
+        GUI_SetTextMode(GUI_TM_TRANS);	//透明文本    注释时间   2022-5-23 15:46:29
 				
 				//这里加读取列表的变量
 				//sprintf(DS1302Z_h_m, "%02d:%02d", time_data[3],time_data[4]);
@@ -4146,9 +4154,9 @@ static void _cbButtonEXIT_WIFIcon_BLACK_10(WM_MESSAGE* pMsg)
 				sprintf(text,"%02d:%s" ,offset,save_ssid[offset]);//offset=0开始，带数标，的提取的SSID的字符串
 				*/
 							
-							
-        //sprintf(text, "8:wifi_text_shian_8");
-        //GUI_DispStringInRect(text, &Rect, GUI_TA_VCENTER | GUI_TA_LEFT);///靠左  和  居中
+							sprintf(text_10, "%s", "shian_WI-FI5");
+        //sprintf(text, "shian_WI-FI5");
+        GUI_DispStringInRect(text_10, &Rect, GUI_TA_VCENTER | GUI_TA_LEFT);///靠左  和  居中
         break;
     default:
         BUTTON_Callback(pMsg);
@@ -4267,7 +4275,7 @@ static void _cbButtonEXIT_WIFIcon_BLACK_10(WM_MESSAGE* pMsg)
 
 //改变button按键的背景的颜色  黑色       解析的ssid的字符写到一个函数里面，自己变化，
 // USER START (Optionally insert additional static code)
-char  text[80];//char*类型   
+//char  text[80];//char*类型   
 
 extern char          ssid[32];
 
@@ -4275,6 +4283,8 @@ static void _cbButtonEXIT_WIFIcon_GREEN_ssid(WM_MESSAGE* pMsg)
 {
     GUI_RECT Rect;
 
+	  char  text_SSID[80];
+	
     switch (pMsg->MsgId)
     {
     case(WM_PAINT)://在WM_PAINT下面修改控件的颜色  2022-3-30 14:37:51
@@ -4304,12 +4314,14 @@ static void _cbButtonEXIT_WIFIcon_GREEN_ssid(WM_MESSAGE* pMsg)
 				 //ESP32S_JoinAP_connect_list_parse("AT+CWLAP",500);//解析SSID的命令的函数,不定长的数据解析。
 				 
 				
-				 //sprintf(text, "%s", "shian");//通过修改"shian"为字符串的接口来实现ssid文本的获取与显示。
-				
-				 sprintf(text, "%s", ssid);
+				 sprintf(text_SSID, "%s", "shian");//测试用   通过修改"shian"为字符串的接口来实现ssid文本的获取与显示。
 				
 				
-         GUI_DispStringInRect(text, &Rect, GUI_TA_VCENTER | GUI_TA_LEFT);///靠左  和  居中
+				
+				 //sprintf(text, "%s", ssid);
+				
+				
+         GUI_DispStringInRect(text_SSID, &Rect, GUI_TA_VCENTER | GUI_TA_LEFT);///靠左  和  居中
 				
 				 GUI_DrawBitmap(&bmwifilockcon, 280,10);//按键上锁的标志，未连接的状态。    判断wifi连接的状态，通过返回ap连接的状态的返回值来判断，转变为wifi的图标
 				                                       //按键上贴图    左上角的坐标   
@@ -4422,7 +4434,9 @@ static void _cbButtonEXIT_WIFIcon_GREEN_up(WM_MESSAGE* pMsg)
 static void _cbButtonEXIT_WIFIcon_GREEN_down(WM_MESSAGE* pMsg)
 {
     GUI_RECT Rect;
-
+    
+	  
+	
     switch (pMsg->MsgId)
     {
     case(WM_PAINT)://在WM_PAINT下面修改控件的颜色  2022-3-30 14:37:51
@@ -4540,49 +4554,53 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
         BUTTON_SetFont(hItem, GUI_FONT_13H_ASCII);                  //2022-4-27 18:19:10
         WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_GREEN_ssid);    //2022-4-27 18:19:10
 	
-	
 	      hItem = WM_GetDialogItem(pMsg->hWin, ID_BUTTON_1);         //2022-4-27 18:19:10
         BUTTON_SetFont(hItem, GUI_FONT_13H_ASCII);                  //2022-4-27 18:19:10
-        WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_GREEN_ssid);    //2022-4-27 18:19:10
-	
+        WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_BLACK_10);    //2022-4-27 18:19:10	
+				
 	
 	      hItem = WM_GetDialogItem(pMsg->hWin, ID_BUTTON_2);         //2022-4-27 18:19:10
         BUTTON_SetFont(hItem, GUI_FONT_13H_ASCII);                  //2022-4-27 18:19:10
-        WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_GREEN_ssid);    //2022-4-27 18:19:10
+        WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_BLACK_9);    //2022-4-27 18:19:10
 	
 	
 	      hItem = WM_GetDialogItem(pMsg->hWin, ID_BUTTON_3);         //2022-4-27 18:19:10
         BUTTON_SetFont(hItem, GUI_FONT_13H_ASCII);                  //2022-4-27 18:19:10
-        WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_GREEN_ssid);    //2022-4-27 18:19:10
+        WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_BLACK_8);    //2022-4-27 18:19:10
 	
 	
 	      hItem = WM_GetDialogItem(pMsg->hWin, ID_BUTTON_4);         //2022-4-27 18:19:10
         BUTTON_SetFont(hItem, GUI_FONT_13H_ASCII);                  //2022-4-27 18:19:10
-        WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_GREEN_ssid);    //2022-4-27 18:19:10
-				
-				
-		    hItem = WM_GetDialogItem(pMsg->hWin, ID_BUTTON_5);         //2022-4-27 18:19:10
-        BUTTON_SetFont(hItem, GUI_FONT_13H_ASCII);                  //2022-4-27 18:19:10
-        WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_GREEN_ssid);    //2022-4-27 18:19:10		
-				
-				
-			  hItem = WM_GetDialogItem(pMsg->hWin, ID_BUTTON_6);         //2022-4-27 18:19:10
-        BUTTON_SetFont(hItem, GUI_FONT_13H_ASCII);                  //2022-4-27 18:19:10
-        WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_GREEN_ssid);    //2022-4-27 18:19:10	
-				
-				
-			  hItem = WM_GetDialogItem(pMsg->hWin, ID_BUTTON_7);         //2022-4-27 18:19:10
-        BUTTON_SetFont(hItem, GUI_FONT_13H_ASCII);                  //2022-4-27 18:19:10
-        WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_GREEN_ssid);    //2022-4-27 18:19:10	
-				
-	      hItem = WM_GetDialogItem(pMsg->hWin, ID_BUTTON_8);         //2022-4-27 18:19:10
-        BUTTON_SetFont(hItem, GUI_FONT_13H_ASCII);                  //2022-4-27 18:19:10
-        WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_GREEN_ssid);    //2022-4-27 18:19:10
+        WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_BLACK_7);    //2022-4-27 18:19:10
 	
 	
-	      hItem = WM_GetDialogItem(pMsg->hWin, ID_BUTTON_9);         //2022-4-27 18:19:10
+	      hItem = WM_GetDialogItem(pMsg->hWin, ID_BUTTON_5);         //2022-4-27 18:19:10
         BUTTON_SetFont(hItem, GUI_FONT_13H_ASCII);                  //2022-4-27 18:19:10
-        WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_GREEN_ssid);    //2022-4-27 18:19:10
+        WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_BLACK_6);    //2022-4-27 18:19:10
+				
+				
+		    hItem = WM_GetDialogItem(pMsg->hWin, ID_BUTTON_6);         //2022-4-27 18:19:10
+        BUTTON_SetFont(hItem, GUI_FONT_13H_ASCII);                  //2022-4-27 18:19:10
+        WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_BLACK_5);    //2022-4-27 18:19:10		
+				
+				
+			 // hItem = WM_GetDialogItem(pMsg->hWin, ID_BUTTON_6);         //2022-4-27 18:19:10
+       // BUTTON_SetFont(hItem, GUI_FONT_13H_ASCII);                  //2022-4-27 18:19:10
+       // WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_GREEN_ssid);    //2022-4-27 18:19:10	
+				
+				
+			  //hItem = WM_GetDialogItem(pMsg->hWin, ID_BUTTON_7);         //2022-4-27 18:19:10
+       // BUTTON_SetFont(hItem, GUI_FONT_13H_ASCII);                  //2022-4-27 18:19:10
+        //WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_GREEN_ssid);    //2022-4-27 18:19:10	
+				
+	      //hItem = WM_GetDialogItem(pMsg->hWin, ID_BUTTON_8);         //2022-4-27 18:19:10
+        //BUTTON_SetFont(hItem, GUI_FONT_13H_ASCII);                  //2022-4-27 18:19:10
+        //WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_GREEN_ssid);    //2022-4-27 18:19:10
+	
+	
+	      //hItem = WM_GetDialogItem(pMsg->hWin, ID_BUTTON_9);         //2022-4-27 18:19:10
+        //BUTTON_SetFont(hItem, GUI_FONT_13H_ASCII);                  //2022-4-27 18:19:10
+        //WM_SetCallback(hItem, _cbButtonEXIT_WIFIcon_GREEN_ssid);    //2022-4-27 18:19:10
 	
 	
 	
@@ -4615,6 +4633,9 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
+			
+			MainTask_allin();
+			
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:
@@ -4630,6 +4651,9 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
+			
+			MainTask_allin();
+			
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:
@@ -4644,6 +4668,10 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
+			
+			MainTask_allin();
+			
+			
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:
@@ -4658,6 +4686,9 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
+			
+			MainTask_allin();
+			
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:
@@ -4672,6 +4703,10 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
+			
+			
+			MainTask_allin();
+			
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:
@@ -4686,6 +4721,10 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
+			
+			MainTask_allin();
+			
+			
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:
@@ -4700,6 +4739,10 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
+			
+			MainTask_allin();
+			
+			
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:
@@ -4714,6 +4757,10 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
+			
+			MainTask_allin();
+			
+			
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:
@@ -4728,6 +4775,9 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
+			
+			MainTask_allin();
+			
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:
@@ -4742,6 +4792,10 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
+			
+			
+			MainTask_allin();
+			
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:
@@ -4756,6 +4810,11 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
+			
+			
+			ButtonUse_Demo();
+			
+			
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:
@@ -4784,6 +4843,9 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
+			
+			
+			
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:
