@@ -6,3 +6,7 @@ IOT_WIFI_CO2
 2.添加了archives2.
 
 3.上传06的正在调试的代码
+
+4.ucosiii  emwin  wifi
+
+5.AT解析框架，字符提取，emwin界面的软件架构
